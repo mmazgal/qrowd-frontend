@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# Qrowd Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React.js frontend for Qrowd project, a social platform for Q&A style interactions with user authentication and dashboard view.
 
-## Available Scripts
+Kullanıcı girişi ve kontrol paneli görüntüsü ile soru-cevap etkileşimi için geliştirilen Qrowd projesinin React.js tabanlı frontend uygulaması.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Project Overview / Proje Özeti
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🇬🇧 English
+Qrowd is a community-driven social application where users can register, log in, and interact in a question & answer format. The frontend is built with React.js and communicates with a FastAPI backend. JWT tokens are used for secure authentication, and future improvements include Docker and Supabase integrations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🇹🇷 Türkçe
+Qrowd, kullanıcıların kayıt olup giriş yaptıktan sonra soru-cevap şeklinde etkileşimde bulunabildiği topluluk odaklı bir sosyal platformdur. Frontend React.js ile geliştirildi ve FastAPI backend ile haberleşiyor. Güvenli kimlik doğrulama için JWT token kullanılıyor. Gelecekte Docker ve Supabase entegrasyonu planlanıyor.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies / Teknolojiler
 
-### `npm run build`
+- **React.js**
+- **Axios** (API istekleri)
+- **JWT Authentication** (Token tabanlı kimlik doğrulama)
+- **React Router DOM** (Sayfa yönlendirme)
+- **Tailwind CSS** (Opsiyonel, ilerleyen aşamada ekleyebiliriz)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation / Kurulum
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the repository / Depoyu klonla
 
-### `npm run eject`
+```bash
+git clone https://github.com/mmazgal/qrowd-frontend.git
+cd qrowd-frontend
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Install dependencies / Bağımlılıkları yükle
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Start the development server / Geliştirme sunucusunu başlat
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+Frontend will run at: [http://localhost:3000](http://localhost:3000)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Frontend şurada çalışacak: [http://localhost:3000](http://localhost:3000)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Features / Özellikler
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [x] User registration / Kullanıcı kayıt
+- [x] User login with token / Token ile kullanıcı girişi
+- [x] Dashboard page after login / Girişten sonra dashboard sayfası
+- [ ] Token expiration handling / Token süresi kontrolü (yolda)
+- [ ] Logout functionality / Çıkış sistemi
+- [ ] UI improvements / Arayüz iyileştirmeleri
+- [ ] Dockerize the frontend / Frontend Docker entegrasyonu
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Backend Integration / Backend Entegrasyonu
 
-### Making a Progressive Web App
+Frontend, FastAPI ile geliştirilen backend'e bağlanıyor. API endpoint'leri şu anda şu şekilde kullanılıyor:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Register:** `POST /register`
+- **Login:** `POST /login`
 
-### Advanced Configuration
+Token başarılı bir girişten sonra local storage veya cookie ile tutulabilir (ileride).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Roadmap / Yol Haritası
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Aşama | Durum |
+|---------|--------|
+| Backend entegrasyonu | ✔️ Tamamlandı |
+| Kullanıcı Kayıt ve Giriş | ✔️ Tamamlandı |
+| Dashboard bağlantısı | ✔️ Yapıldı |
+| Token süresi ve otomatik çıkış | ⏳ Yapılacak |
+| UI güncellemeleri | ⏳ Yapılacak |
+| Docker ile yayınlama | ⏳ Yapılacak |
+| Supabase entegrasyonu | ⏳ Finalde |
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribution / Katkı
+
+This is a private repository for now.
+
+Bu proje şu anda private (gizli) bir repodur.
+
+Yakında proje tamamlandığında public (açık kaynak) yapabiliriz! 🚀
+
+---
+
+## License / Lisans
+
+Private repository for personal development and future public release.
+
+Şimdilik özel repo, geliştirme tamamlandığında açık kaynak yapılabilir.
+
